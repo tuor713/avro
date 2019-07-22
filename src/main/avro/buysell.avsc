@@ -1,0 +1,6 @@
+{
+  "namespace": "gsp",
+  "type": "enum",
+  "name": "BuySell",
+  "symbols": ["BUY", "SELL"]
+}

@@ -1,0 +1,10 @@
+{"namespace": "gsp",
+ "type": "record",
+ "name":  "RFQ",
+ "fields": [
+   {"name": "ECNRFQId", "type": "string"},
+   {"name": "Quantity", "type": "double"},
+   {"name":  "CUSIP", "type": "string"},
+   {"name":  "ECN", "type": {"name": "ECNName", "type": "enum", "symbols": ["MarketAxessNAM", "MarketAxessEMEA"]}}
+
+ ]}

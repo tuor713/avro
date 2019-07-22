@@ -1,0 +1,41 @@
+[
+  {
+    "namespace": "gsp",
+    "type": "record",
+    "name": "FirmAccount",
+    "fields": [
+      {
+        "name": "Mnemonic",
+        "type": "string"
+      },
+      {
+        "name": "LegalEntityCode",
+        "type": "string"
+      },
+      {
+        "name": "StrategyCode",
+        "type": "string"
+      },
+      {
+        "name": "GOC",
+        "type": ["null", "string"],
+        "default": null
+      }
+    ]
+  },
+  {
+    "namespace": "gsp",
+    "type": "record",
+    "name": "CustomerAccount",
+    "fields": [
+      {
+        "name": "Mnemonic",
+        "type": "string"
+      },
+      {
+        "name": "GFCID",
+        "type": "string"
+      }
+    ]
+  }
+]

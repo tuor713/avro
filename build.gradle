@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:0.14.1"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: "com.commercehub.gradle.plugin.avro"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.avro', name: 'avro', version: '1.9.0'
+}
+
+test {
+    useJUnit()
+    testLogging.showStandardStreams = true
+}
+
+group 'org.uwh.avro.plugin'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8

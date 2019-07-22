@@ -1,0 +1,24 @@
+[
+  {
+    "namespace": "gsp",
+    "type": "record",
+    "name": "Offering",
+    "fields": [
+      {"name": "CUSIP", "type": "string"},
+      {"name": "Venue", "type": "string"},
+      {"name": "Price", "type": "double"},
+      {"name": "Size", "type": "double"},
+      {"name": "Side", "type": "gsp.BuySell"}
+    ]
+  },
+  {
+    "namespace": "gsp",
+    "type": "record",
+    "name": "OfferingStack",
+    "fields": [
+      {"name": "CUSIP", "type": "string"},
+      {"name": "BuyPrices", "type": {"type": "array", "items": "gsp.Offering"}},
+      {"name": "SellPrices", "type": {"type": "array", "items": "gsp.Offering"}}
+    ]
+  }
+]

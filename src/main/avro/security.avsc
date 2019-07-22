@@ -1,0 +1,9 @@
+{"namespace": "gsp",
+ "type": "record",
+ "name": "Security",
+ "fields": [
+   {"name": "CUSIP", "type": "string"},
+   {"name": "Description", "type": "string"},
+   {"name": "MaturityDate", "type": "string", "logicalType": "date"},
+   {"name": "Coupon", "type": "double"}
+ ]}

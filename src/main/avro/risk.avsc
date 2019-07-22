@@ -1,0 +1,35 @@
+[
+  {
+    "namespace": "gsp",
+    "type": "enum",
+    "name": "Currency",
+    "symbols": ["USD", "EUR", "GBP", "JPY"]
+  },
+  {
+    "namespace": "gsp",
+    "type": "record",
+    "name": "RiskAmount",
+    "fields": [
+      {"name": "Currency", "type": "gsp.Currency"},
+      {"name": "Amount", "type": "double"}
+    ]
+  },
+  {
+    "namespace": "gsp",
+    "type": "record",
+    "name": "TradeRiskValue",
+    "fields": [
+      {"name": "RiskMeasure", "type": "string"},
+      {"name": "Parameter", "type": ["null", "string"], "default": null},
+      {"name": "RiskValue", "type": "gsp.RiskAmount"}
+    ]
+  },
+  {
+    "namespace": "gsp",
+    "type": "record",
+    "name": "RiskResult",
+    "fields": [
+      {"name": "TradeRisk", "type": {"type": "map", "values": "gsp.TradeRiskValue"}}
+    ]
+  }
+]
